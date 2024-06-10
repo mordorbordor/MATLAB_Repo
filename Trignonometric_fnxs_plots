@@ -1,0 +1,19 @@
+x = 0:2*pi/100:2*pi;
+y1 = sin(x);
+y2 = cos(x);
+y3 = tan(x);
+y4 = cot(x);
+
+
+plot(x, y1, 'r--');
+hold on 
+plot(x, y2, 'b:');
+plot(x,y3, 'go');
+plot(x,y4, 'k+');
+hold off
+axis([0 2*pi -2 2])
+xlabel('Values in degrees');
+ylabel('Trigonometric Functions');
+legend('sin', 'cos', 'tan', 'cot');
+title('NIELIT MATLAB Trigonometric Operation')
+grid on 
