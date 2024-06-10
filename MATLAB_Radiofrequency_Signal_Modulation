@@ -1,0 +1,31 @@
+%% Message signal and carrier signal
+Am = 0.5;
+fm = 100;
+Tm = 1/fm;
+t_msg = 0:Tm/25:5*Tm;
+msg_sgnl =  Am*sin(2*pi*fm*t_msg);
+
+Ac = 0.5; 
+fc = 5000;
+Tc = 1/fc;
+t_car = 0:Tc/25:5*Tm;
+car_sgnl = Ac*sin(2*pi*fc*t_car);
+
+subplot(7,1,1)
+plot(t_msg, msg_sgnl, 'r-')
+title('Message Signal');
+
+subplot(7,1,2)
+plot(t_car, car_sgnl, ['g-.'])
+title('Carrier Signal');
+
+
+%% AMDSBFC signal => carrier_signal*(1+modulation_index*sin(2*pi*frequency*time)
+plot_num = 3;
+for mod_inx = 0.6:0.2:1.4
+    Y_AM_DSBFC = Ac*sin(2*pi*fc*t_car) .* (1+mod_inx*sin(2*pi*fm*t_car));
+subplot (7,1,plot_num)
+plot(t_car, Y_AM_DSBFC)
+title(['AM-DSBFC signal with modulation index: ', num2str(mod_inx)]);
+plot_num = plot_num + 1;
+end
