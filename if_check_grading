@@ -1,0 +1,12 @@
+## This is an if_check project for grading of students based on the marks as variables. 
+
+x=input('Enter the total marks: ');
+if x<25
+    disp('Grade = FAIL');
+elseif x>25 && x<50
+    disp('Grade = C');
+elseif x>50 && x<75
+    disp('Grade = B');
+elseif x>75 && x<100
+    disp('Grade = A');
+end
