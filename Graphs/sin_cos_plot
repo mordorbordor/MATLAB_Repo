@@ -1,0 +1,29 @@
+%% General syntax of plot:
+
+%% plot(xval1, yval1, xval2, yval2,....)
+
+x1 = 0:2*2*pi/360:2*pi;
+y1 = sin(x1);
+y2 = cos(x1);
+
+plot(x1,y1);
+hold on 
+plot(x1,y2);
+hold off
+
+grid on  %% grid off - turns off the grid!
+
+% Axis limits: axis([xmin xmax ymin ymax])
+axis([0 2*pi -1.5 1.5])
+
+% xlabel, ylabel, title, legend 
+xlabel('Angle in radians/degrees');
+ylabel('sin function');
+title('sin/cos function MATLAB tutorial');
+legend('sin', 'cos');
+
+%% Aesthetics (Color and Lines) in graphs
+plot(x1, y1, 'r-.x')
+
+%% SUBPLOTS - subplot(row, col, pos)
+subplot(2,1,1)
