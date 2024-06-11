@@ -1,0 +1,20 @@
+## This project deals with various functions including elemental basic arithmetics. 
+
+a = input ('enter first variable here: ');
+b = input ('enter second varibale here: ');
+sum = a+b              ##Summation
+diff = a-b             ##Difference
+mul = a*b              ##Multiplication
+div = a/b              ##Division
+ele_mul = a.*b         ##Elemental multiplication
+ele_div = a./b         ##Forward elemental division
+ele_div_bck = a.\b     ##Backward elemental division
+
+disp (['The sum of variable: ',sum])
+disp (['The difference of variable: ', diff])
+disp (['The product of varibale: ', mul])
+disp (['The dividend of variable: ', div])
+disp (['The elemental product of the variable: ', ele_mul])
+disp (['The elemental dividend by forward division of variable: ', ele_div])
+disp (['The elemental dividend by backward division of variable: ', ele_div_bck])
+
