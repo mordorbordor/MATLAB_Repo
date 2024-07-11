@@ -26,4 +26,4 @@ end
 %% Method 3: Use matrix-vector multiplication, most efficient in MATLAB. 
 t = 0:0.01:1;
 k = 1:3;
-xt_2 = (1./k)*sin(2*pi*k'*t);
+xt_2 = (1./k)*sin(2*pi*k'*t); %% Array division (1./k) generates a row vector and matrix multiplication to implement all other operations. 
