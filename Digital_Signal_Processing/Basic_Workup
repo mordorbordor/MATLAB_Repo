@@ -1,0 +1,20 @@
+%% This project is a basic workup of a waveform and its graphical representation. 
+
+t = 0:0.01:2; %% Sample points from 0 to 2 in steos of 0.01.
+k = 1:2:5;
+ck = 1./k;
+xt = ck*sin(2*pi*k'*t);
+function xt = sinsum(t,ck) %% Computes sum of sinusoidal terms. 
+% x = sinsum(t,ck)
+K = length(ck);
+k = 1:K;
+ck = ck(:)'; %% It uses indexing and transposition to force it to be a row vector.
+t = t(:)'; %% It uses indexing and transposition to force it to be a row vector.
+xt = ck*sin(2*pi*k'*t);
+end
+%% Graph 
+plot(t,xt, 'r'); %% Create a plot with red line. 
+xlabel('t in sec.');
+ylabel('x(t)');
+title('Plot of sin(2\pi*t)');
+
