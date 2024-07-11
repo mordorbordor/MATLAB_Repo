@@ -1,0 +1,18 @@
+%% HANDLE-GRAPHICS: Plotting a set of discrete numbers (or discrete-time signals).
+
+n = 0:1:40; %% Sample index as shown
+xn = sin(0.2*pi*n); %% Evaluate for the said equation
+
+t = 0:0.01:2; 
+xt = sin(2*pi*t); 
+
+subplot(2,1,1)
+plot(t,xt,'r');
+xlabel('t in sec.'); ylabel('x(t)');
+title('Plot of sin(2\pi t)');
+
+subplot(2,1,2)
+Hs = stem(n*0.05,xn, 'b', 'filled'); %% Stem-plot with handle Hs
+set(Hs, 'markersize', 3); %% Circle size setting
+xlabel('n'); ylabel('x(n)'); %% Label axis
+title('Stem plot of sin(0.2\pi*n)') %% Title plot
